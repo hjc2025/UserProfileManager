@@ -59,7 +59,7 @@ namespace UserProfileManager
             services.AddSingleton<ISavingStrategy, XmlSavingStrategy>();
 
             // Registering the Factory that depends on the collection of strategies
-            services.AddSingleton<SavingStrategyFactory>();
+            services.AddSingleton<ISavingStrategyFactory, SavingStrategyFactory>();
 
             // Registering the MVP components
             // The View (Form) is registered so the DI container can create it.

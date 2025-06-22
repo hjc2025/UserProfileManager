@@ -2,7 +2,7 @@
 {
     // The Factory's job is to know about all available strategies and provide
     // the requested one. It's a central point of management for our strategies.
-    public class SavingStrategyFactory
+    public class SavingStrategyFactory : ISavingStrategyFactory
     {
         private readonly IReadOnlyDictionary<string, ISavingStrategy> _strategies;
 

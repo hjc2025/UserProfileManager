@@ -13,7 +13,7 @@ namespace UserProfileManager.Presenters
         // Private fields for all the dependencies (abstractions, not concrete classes).
         private readonly IProfileView _view;
         private readonly IUserProfileRepository _repository;
-        private readonly SavingStrategyFactory _strategyFactory;
+        private readonly ISavingStrategyFactory _strategyFactory;
         private readonly INotificationService _notificationService;
         private readonly IConfiguration _configuration;
 
@@ -24,7 +24,7 @@ namespace UserProfileManager.Presenters
         public ProfilePresenter(
             IProfileView view,
             IUserProfileRepository repository,
-            SavingStrategyFactory strategyFactory,
+            ISavingStrategyFactory strategyFactory,
             INotificationService notificationService,
             IConfiguration configuration)
         {
